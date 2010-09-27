@@ -5,6 +5,6 @@ Feature: read a fortune
 
   Scenario: View Fortune
     Given a fortune saying "live long and prosper"
-    When I am on the homepage
+    When I am on the fortune page
     Then I should see "live long and prosper"
   
