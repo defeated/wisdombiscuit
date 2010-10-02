@@ -7,4 +7,5 @@ group :development, :test do
   gem 'rspec-rails', '2.0.0.beta.22'
   gem 'cucumber-rails'
   gem 'capybara'
+  gem 'launchy'
 end
