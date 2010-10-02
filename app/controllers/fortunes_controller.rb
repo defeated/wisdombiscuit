@@ -6,6 +6,11 @@ class FortunesController < ApplicationController
   
   def random
     @fortune = Fortune.random
+
+    if @fortune.nil?
+      @fortune = Fortune.new
+      flash[:alert] = "No fortunes found"
+    end
   end
 
 end

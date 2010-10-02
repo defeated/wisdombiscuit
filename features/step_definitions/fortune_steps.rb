@@ -8,6 +8,10 @@ Given /^a list of fortunes$/ do
   @fortunes = Fortune.all
 end
 
+Given /^no fortunes$/ do
+  Fortune.destroy_all
+end
+
 Then /^I should see a random fortune$/ do
   text    = page.find_by_id('fortune').text.strip
   fortune = Fortune.find_by_text(text)
