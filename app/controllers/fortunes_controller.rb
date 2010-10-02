@@ -5,8 +5,7 @@ class FortunesController < ApplicationController
   end
   
   def random
-    random = rand(Fortune.count)
-    @fortune = Fortune.limit(1).offset(random).first
+    @fortune = Fortune.random
   end
 
 end
