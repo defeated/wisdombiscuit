@@ -21,5 +21,5 @@ end
 
 
 def create_fortune(text)
-  Fortune.create! :text => text
+  @fortune = Fortune.create! :text => text
 end

@@ -1,0 +1,11 @@
+<%= form_for(@fortune) do |f| %>
+  <%= render 'shared/error_messages', :model => @fortune %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

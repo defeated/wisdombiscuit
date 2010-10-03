@@ -3,7 +3,7 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file 
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
-
+$VERBOSE=nil # HACK temporary fix for the "regexp match against to UTF-8 string" warning issue
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 
