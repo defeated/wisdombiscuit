@@ -1,16 +1,19 @@
 class FortunesController < ApplicationController
-  respond_to :html
+  respond_to :html, :xml, :json
 
   def index
     @fortunes = Fortune.all
+    respond_with(@fortunes)
   end
   
   def new
     @fortune = Fortune.new
+    respond_with(@fortune)
   end
   
   def edit
     @fortune = Fortune.find(params[:id])
+    respond_with(@fortune)
   end
   
   def create
@@ -21,6 +24,7 @@ class FortunesController < ApplicationController
   
   def show
     @fortune = Fortune.find(params[:id])
+    respond_with(@fortune)
   end
   
   def update
@@ -38,6 +42,11 @@ class FortunesController < ApplicationController
   def random
     @fortune = Fortune.random
     flash.now[:alert] = "No fortunes found" unless @fortune
+
+    respond_with(@fortune) do |format|
+      format.xml { render :xml => @fortune.to_xml(:only => :text) }
+      format.json { render :json => @fortune.to_json(:only => :text) }
+    end
   end
 
 end

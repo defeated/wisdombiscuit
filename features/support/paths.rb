@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when /the edit fortune page/
       edit_fortune_path(@fortune)
+    when /the random fortunes page with token "(.*)" and format "(.*)"/
+      random_fortune_path(:auth_token => $1, :format => $2)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
