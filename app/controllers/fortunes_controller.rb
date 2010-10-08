@@ -1,5 +1,10 @@
 class FortunesController < ApplicationController
   respond_to :html, :xml, :json
+  
+  before_filter do |controller|
+    return if controller.action_name == 'random' && request.format == 'html'
+    authenticate_user!
+  end
 
   def index
     @fortunes = Fortune.all

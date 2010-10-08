@@ -3,6 +3,9 @@ Feature: Manage fortunes
   As a user
   I want to manage my fortunes
 
+  Background:
+    Given an authenticated user "user@domain.com" with password "pass123"
+
   Scenario: Add fortune
     Given I am on the new fortune page
     When I fill in "Text" with "live long and prosper"
