@@ -1,4 +1,10 @@
 Wisdombiscuit::Application.routes.draw do
+  devise_for :users
+
+  resources :fortunes
+  
+  root :to => "Fortunes#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
