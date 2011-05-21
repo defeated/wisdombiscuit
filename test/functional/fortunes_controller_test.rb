@@ -3,6 +3,8 @@ require 'test_helper'
 class FortunesControllerTest < ActionController::TestCase
   setup do
     @fortune = fortunes(:one)
+    @fortune.text = "unique name"
+    sign_in users(:example)
   end
 
   test "should get index" do

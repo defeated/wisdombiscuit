@@ -11,3 +11,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+# from https://github.com/plataformatec/devise/blob/master/README.rdoc
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
