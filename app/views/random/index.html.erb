@@ -1,1 +1,6 @@
-<h1><%= @fortune.text %></h1>
+<h1 id="fortune"><%= @fortune.text %></h1>
+
+<%= link_to 'again', random_path,
+      :id           => 'again',
+      :remote       => true,
+      :'data-type'  => 'json' %>
