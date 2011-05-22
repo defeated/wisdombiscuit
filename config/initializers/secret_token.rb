@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Wisdombiscuit::Application.config.secret_token = '3fc48a42ede90e92f60e1cf1f9309605abf140943f3f6b50bd066acdc50aa46ed661b34bd64b73bb76fd257d06367e9b8ee4b89fafa73cd0b69819543fb30fd3'
+Wisdombiscuit::Application.config.secret_token = '3c5e15dd353aa5a8df55eabf616cfcde94ca9d8301eb5bf8b706e9ce976502fc3864a2349d0875e2e37c5cfde52b2480e9a350e432b2bc517e06ee4b962b88dc'
