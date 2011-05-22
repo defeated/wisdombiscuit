@@ -1,9 +1,12 @@
 Wisdombiscuit::Application.routes.draw do
+
   devise_for :users
 
   resources :fortunes
   
-  root :to => "Fortunes#index"
+  match "random" => "random#index", :as => :random
+  
+  root :to => "random#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
