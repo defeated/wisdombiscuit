@@ -7,14 +7,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-$(function(){
-
-	$('#again').bind('ajax:success', function(evt, data){
-		var fortune = $("#fortune");
-		fortune.fadeOut('slow', function(){
-			fortune.html(data.text).fadeIn('slow');
-		})
-	});
-
-});
