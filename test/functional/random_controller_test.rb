@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RandomControllerTest < ActionController::TestCase
-
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -14,11 +14,27 @@ class RandomControllerTest < ActionController::TestCase
   
   test "should get json" do
     get :index, :format => :json
-    
-    # FIXME: @fortune is non-deterministic but this seems like an egregious mistake.
-    fortune = @controller.instance_variable_get("@fortune")
-    
-    assert_equal '{"fortune":{"text":"' + fortune.text + '"}}', response.body
+    get_fortune
+    assert_equal '{"fortune":{"text":"' + @fortune.text + '"}}', response.body
   end
+  
+  test "should get xml" do
+    get :index, :format => :xml
+    get_fortune
+    assert_equal '<?xml version="1.0" encoding="UTF-8"?>' + "\n<fortune>\n  <text>" + @fortune.text  + "</text>\n</fortune>\n", response.body
+  end
+  
+  test "should get plain text" do
+    get :index, :format => :text
+    get_fortune
+    assert_equal @fortune.text, response.body
+  end
+
+  private
+  
+    def get_fortune
+      # FIXME: @fortune is non-deterministic but this seems like an egregious mistake.
+      @fortune = @controller.instance_variable_get("@fortune")
+    end
 
 end
