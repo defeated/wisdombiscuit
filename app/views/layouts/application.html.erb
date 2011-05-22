@@ -4,7 +4,13 @@
   <title>Wisdombiscuit</title>
   <%= stylesheet_link_tag     'http://fonts.googleapis.com/css?family=Lobster' %>
   <%= stylesheet_link_tag     "application" %>
+  <%= stylesheet_link_tag     'themes/fire',  :title => 'fire' %>
+  <%= stylesheet_link_tag     'themes/jade',  :title => 'jade',   :rel => 'alternate stylesheet' %>
+  <%= stylesheet_link_tag     'themes/night', :title => 'night',  :rel => 'alternate stylesheet' %>
+  <%= stylesheet_link_tag     'themes/day',   :title => 'day',    :rel => 'alternate stylesheet' %>
+  
   <%= javascript_include_tag  "application" %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body id="wisdombiscuit-com">
