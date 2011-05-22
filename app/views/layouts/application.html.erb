@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wisdombiscuit</title>
+  <title>Wisdom Biscuit</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+
   <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'themes/fire', :title => 'fire' %>
+  <%= stylesheet_link_tag 'themes/jade', :title => 'jade', :rel => 'alternate stylesheet' %>
+  <%= stylesheet_link_tag 'themes/night', :title => 'night', :rel => 'alternate stylesheet' %>
+  <%= stylesheet_link_tag 'themes/day', :title => 'day', :rel => 'alternate stylesheet' %>
+
   <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js' %>
   <%= javascript_include_tag :defaults %>
+
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body id="wisdombiscuit-com">
 
-<%= yield %>
+<div id="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

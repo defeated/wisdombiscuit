@@ -1,0 +1,5 @@
+body {
+	background-color: #eee;
+  background-image: -moz-linear-gradient(0% 100% 90deg, #666, #222);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#666));
+}
