@@ -15,7 +15,7 @@ class RandomControllerTest < ActionController::TestCase
   test "should get json" do
     get :index, :format => :json
     get_fortune
-    assert_equal '{"fortune":{"text":"' + @fortune.text + '"}}', response.body
+    assert_equal '{"text":"' + @fortune.text + '"}', response.body
   end
   
   test "should get xml" do
