@@ -1,10 +1,7 @@
 require 'test_helper'
 
 class RandomControllerTest < ActionController::TestCase
-  setup do
-    @fortune = fortunes(:one)
-  end
-  
+
   test "should get index" do
     get :index
     assert_response :success
@@ -17,7 +14,11 @@ class RandomControllerTest < ActionController::TestCase
   
   test "should get json" do
     get :index, :format => :json
-    assert_equal '{"fortune":{"text":"' + @fortune.text + '"}}', response.body
+    
+    # FIXME: @fortune is non-deterministic but this seems like an egregious mistake.
+    fortune = @controller.instance_variable_get("@fortune")
+    
+    assert_equal '{"fortune":{"text":"' + fortune.text + '"}}', response.body
   end
 
 end
