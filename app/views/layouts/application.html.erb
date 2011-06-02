@@ -16,6 +16,10 @@
 <body id="wisdombiscuit-com">
 
 <div id="content">
+  <% flash.each do |name, msg| %>
+    <p id="<%= name %>"><%= msg %></p>
+  <% end %>
+
   <%= yield %>
 </div>
 
