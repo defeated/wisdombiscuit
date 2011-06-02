@@ -47,6 +47,7 @@ GEM
     erubis (2.7.0)
     execjs (1.0.0)
       multi_json (~> 1.0)
+    gravtastic (3.1.0)
     haphazard (0.3.0)
       activerecord (~> 3.0)
     heroku (2.1.4)
@@ -123,6 +124,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   devise
+  gravtastic
   haphazard
   heroku
   jquery-rails

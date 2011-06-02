@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'haphazard'
 gem 'heroku'
+gem 'gravtastic'
 
 group :development, :test do
   gem 'sqlite3'
