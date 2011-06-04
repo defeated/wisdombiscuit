@@ -19,6 +19,7 @@ gem 'devise'
 gem 'haphazard'
 gem 'heroku'
 gem 'gravtastic'
+gem 'css3buttons'
 
 group :development, :test do
   gem 'sqlite3'
