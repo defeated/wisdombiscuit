@@ -55,17 +55,17 @@ header {
 	}
 }
 
-#content {
-	position: absolute;
-	top: 20%;
+/* RandomController */
+body.random #content {
+	padding-top: 5%;
 	width: 100%;
-}
-
-#content h1 {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font: 72px 'Lobster', arial, serif;
-	color: rgba(255, 255, 255, 0.66);
-	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+	
+	h1 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font: 72px 'Lobster', arial, serif;
+		color: rgba(255, 255, 255, 0.66);
+		text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+	}
 }
